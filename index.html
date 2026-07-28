@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge Tutor</title>
+    <meta
+      name="description"
+      content="Knowledge Tutor is a colorful homework chatbot for math, science, English, and social studies."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero-card">
+        <div class="hero-text">
+          <p class="eyebrow">AI Homework Sidekick</p>
+          <h1>Knowledge Tutor</h1>
+          <p class="hero-copy">
+            A bright, playful study buddy that helps you think through homework
+            in math, science, English, social studies, and beyond.
+          </p>
+        </div>
+        <div class="hero-badges" aria-label="Supported subjects">
+          <span class="pill">Math</span>
+          <span class="pill">Science</span>
+          <span class="pill">English</span>
+          <span class="pill">Social Studies</span>
+        </div>
+      </header>
+
+      <main class="chat-card">
+        <div class="chat-header">
+          <div>
+            <h2>Ask your homework question</h2>
+            <p>Tap Send to launch your prompt.</p>
+          </div>
+          <div class="status-badge">✨ Online</div>
+        </div>
+
+        <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+        <div class="suggestions">
+          <button class="suggestion-chip" type="button">Explain fractions</button>
+          <button class="suggestion-chip" type="button">Help with photosynthesis</button>
+          <button class="suggestion-chip" type="button">Improve my essay</button>
+        </div>
+
+        <div id="imagePreview" class="image-preview hidden" aria-live="polite"></div>
+
+        <form id="chatForm" class="chat-form">
+          <label class="sr-only" for="userInput">Type your homework question</label>
+          <input
+            id="userInput"
+            name="userInput"
+            type="text"
+            placeholder="Type your homework question..."
+            autocomplete="off"
+            maxlength="220"
+          />
+          <label class="attach-button" for="imageInput">
+            Attach image
+            <input id="imageInput" type="file" accept="image/*" />
+          </label>
+          <button id="sendButton" type="submit">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
